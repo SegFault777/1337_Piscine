@@ -87,9 +87,3 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	result[last_index + 1] = '\0';
 	return (result);
 }
-
-int main(int argc, const char *argv[])
-{
-	printf("%s\n", ft_convert_base(argv[1], argv[2], argv[3]));
-	return 0;
-}
