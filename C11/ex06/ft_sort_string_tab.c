@@ -25,8 +25,8 @@ int ft_size(char **tab)
 {
     int i;
 
-    i = 0;
-    while(tab[i++]);
+    i = -1;
+    while(tab[++i]);
     return i;
 }
 
@@ -35,12 +35,9 @@ void ft_sort_string_tab(char **tab)
     int i;
     int size;
 
-    i = 1;
+    i = -1;
     size = ft_size(tab);
-    while(i < size - 1)
-    {
+    while(++i < size - 1)
         if(cmp(tab[i], tab[i + 1]))
             ft_swap(&tab[i], &tab[i + 1]);
-        i++;
-    }
 }
