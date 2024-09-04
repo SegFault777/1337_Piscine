@@ -38,7 +38,7 @@ static char *ft_allocate(char *str, char c, int *index)
     while (str[saved_index] && !ft_isspliter(str[saved_index], c))
     {
         saved_index++;
-        i ++;
+        i++;
     }
     splited = malloc(i + 1);
     if (!splited)
@@ -46,11 +46,7 @@ static char *ft_allocate(char *str, char c, int *index)
     splited[i] = '\0';
     i = 0;
     while (str[*index] && !ft_isspliter(str[*index], c))
-    {
-        splited[i] = str[*index];
-        *index = *index + 1;
-        i++;
-    }
+        splited[i++] = str[(*index)++];
     return (splited);
 }
 
